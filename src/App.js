@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 const musicas = [
-  { titulo: 'Guitar solo', artista: 'National Sweetheart', src: '/musicas/Headlands - National Sweetheart.mp3', img: '/imagens/img1.jpg' },
-  { titulo: 'Música Tranquila', artista: 'Everet Almond', src: '/musicas/House on the hill - Everet Almond.mp3', img: '/imagens/img2.jpg' },
-  { titulo: 'Música piano', artista: 'Jovenes Viejos', src: '/musicas/Meneate las Pompis.mp3', img: '/imagens/img3.jpg' }
+  { titulo: 'Headlands', artista: 'National Sweetheart', src: '/musicas/Headlands - National Sweetheart.mp3', img: '/imagens/img1.jpg' },
+  { titulo: 'House on the hill', artista: 'Everet Almond', src: '/musicas/House on the hill - Everet Almond.mp3', img: '/imagens/img2.jpg' },
+  { titulo: 'Meneate las Pompis', artista: 'Jovenes Viejos', src: '/musicas/Meneate las Pompis - Jovenes Viejos.mp3', img: '/imagens/img3.jpg' }
 ];
 
 function App() {
@@ -68,15 +68,16 @@ function App() {
   return (
     <div className="App">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
       <img src={musicas[indexMusica].img} alt="Capa da música" />
       {renderizarMusica()}
+
       <div className="duracao">
-        <div className="barra">
-          <progress value={progress} max="1"></progress>
+        <div class="barra-container">
+          <div className="barra">
+            <progress value={progress} max="1"></progress>
+          </div>
         </div>
         <div className="tempo">
           <p className="inicio">0:00</p>

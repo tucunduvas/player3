@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let nomeArtista = document.querySelector('.descricao i');
   
     renderizarMusica(indexMusica);
-  
-    // Eventos
+
     document.querySelector('.botao-play').addEventListener('click', tocarMusica);
     document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
   
